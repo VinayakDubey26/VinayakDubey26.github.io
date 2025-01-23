@@ -30,7 +30,7 @@ onload = () => {
       flower.style.left = `${leftPos}vw`;
       flower.style.height = `${dim}vmin`;
       flower.style.width = `${dim}vmin`;
-      flower.style.bottom= `10vh`
+      flower.style.top= `70vh`
       flower.style.animationDelay = `${getRandomArbitrary(0, 500)}ms`;
       flower.style.zIndex = 100 - dim; 
 
