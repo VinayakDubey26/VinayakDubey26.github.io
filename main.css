@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 150vh;
+  height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
@@ -23,7 +23,6 @@ body {
   display: flex;
   height: 100vh;
 }
-
 .night {
   position: fixed;
   left: 50%;
@@ -69,7 +68,7 @@ body {
 
 .flowers {
   position: relative;
-  transform: scale(0.7);
+  transform: scale(0.7) translateY(0vh); /* Lowered Flowers */
 }
 @keyframes growFlower {
   0% {
@@ -478,20 +477,20 @@ body {
   animation-delay: 3.5s;
 }
 .flower__g-long {
-  --w: 2vmin;
-  --h: 6vmin;
-  --c: #0e5b3c;
-  position: absolute;
-  bottom: 10vmin;
-  left: -3vmin;
-  transform-origin: bottom center;
-  transform: rotate(-30deg) rotateY(-20deg);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  -webkit-animation: flower-g-long-ans 3s linear infinite;
-  animation: flower-g-long-ans 3s linear infinite;
-}
+    --w: 2vmin;
+    --h: 6vmin;
+    --c: #0e5b3c;
+    position: absolute;
+    bottom: 6vmin; /* lowered the starting point of the grass*/
+    left: -3vmin;
+    transform-origin: bottom center;
+    transform: rotate(-30deg) rotateY(-20deg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    -webkit-animation: flower-g-long-ans 3s linear infinite;
+    animation: flower-g-long-ans 3s linear infinite;
+  }
 @-webkit-keyframes flower-g-long-ans {
   0%,
   100% {
@@ -529,7 +528,7 @@ body {
 }
 .flower__g-right {
   position: absolute;
-  bottom: 6vmin;
+  bottom: 2vmin; /* lowered the starting point of the grass*/
   left: -2vmin;
   transform-origin: bottom left;
   transform: rotate(20deg);
@@ -599,7 +598,7 @@ body {
 }
 .flower__g-front {
   position: absolute;
-  bottom: 6vmin;
+  bottom: 2vmin; /* lowered the starting point of the grass*/
   left: 2.5vmin;
   z-index: 100;
   transform-origin: bottom center;
@@ -764,12 +763,8 @@ body {
 }
 .flower__g-fr {
   position: absolute;
-  bottom: -4vmin;
+  bottom: -8vmin; /* lowered the starting point of the grass*/
   left: vmin;
-  transform-origin: bottom left;
-  z-index: 10;
-  -webkit-animation: flower__g-fr-ans 2s linear infinite;
-  animation: flower__g-fr-ans 2s linear infinite;
 }
 @-webkit-keyframes flower__g-fr-ans {
   0%,
